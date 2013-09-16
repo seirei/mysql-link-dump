@@ -23,6 +23,11 @@ source $ENV_FILE
 DB_NAME=`basename $0`
 
 #
+# dmp file name.
+#
+BACKUP_FILE='mysql_'$DB_NAME'_'`date +"%Y%m%d"`'.dmp.gz'
+
+#
 # Backup MySql.
 #
 mysqldump -h $DB_HOST -u $DB_USER -p$DB_PASS $DB_NAME | gzip > $BACKUP_DIR/$BACKUP_FILE
