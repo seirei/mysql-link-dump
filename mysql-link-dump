@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# Easy MySQL backup shell.
+#
+# Fork me on github:
+#  http://github.com/seirei/mysql-link-dump
+#
+# Author:
+#   MORI Tomohito <seirei@me.com>
+#   Copyright 2013, no rights reserved.
+#
+
+#
+# Setting.
+#
+DB_NAME=`basename $0`
+DB_HOST='localhost'
+DB_USER=''
+DB_PASS=''
+BACKUP_DIR=''
+BACKUP_FILE='mysql_'$DB_NAME'_'`date +"%Y%m%d"`'.dmp'
+
+#
+# Backup MySql.
+#
+mysqldump -h $DB_HOST -u $DB_USER -p$DB_PASS $DB_NAME | gzip > $BACKUP_DIR/$BACKUP_FILE
