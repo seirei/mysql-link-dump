@@ -11,9 +11,11 @@
 #
 
 #
-# env.
+# source env.
 #
-source envvars
+READ_LINK=`readlink $0`
+ENV_FILE=`dirname $READ_LINK`/envvars
+source $ENV_FILE
 
 #
 # Setting.
