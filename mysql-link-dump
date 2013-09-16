@@ -11,14 +11,14 @@
 #
 
 #
+# env.
+#
+source envvars
+
+#
 # Setting.
 #
 DB_NAME=`basename $0`
-DB_HOST='localhost'
-DB_USER=''
-DB_PASS=''
-BACKUP_DIR=''
-BACKUP_FILE='mysql_'$DB_NAME'_'`date +"%Y%m%d"`'.dmp'
 
 #
 # Backup MySql.
