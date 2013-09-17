@@ -6,6 +6,6 @@ This **mysql-link-dump** very simple. This takes the backup of a single database
 
 vi envvars
 
-ln -s mysql-link-dump sampledb
+ln -s mysql-link-dump /full/path/sampledb
 
 ./sampledb
