@@ -1,4 +1,5 @@
-DB_HOST=''
+DB_HOST='localhost'
 DB_USER=''
 DB_PASS=''
-BACKUP_DIR=''
+BACKUP_DIR='/path/to/your/backups'
+KEEP_DAY=30
